@@ -18,6 +18,7 @@ public class MainClass {
 		mylist.add(9);
 		
 		//filter : to find even numbers in the list
+		System.out.println("filters all elements divisible by 2: ");
 		mylist.stream().filter(a -> a%2==0).forEach(System.out::println);
 		
 		//reduce : to find maximum number
@@ -27,6 +28,10 @@ public class MainClass {
 		//reduce : to find sum of all elements in the list
 		Integer sum = mylist.stream().reduce((a,b) -> a + b).get();
 		System.out.println("sum of all elements - " + sum);
+		
+		//map : to multiple elements by 2
+		System.out.println("all elements multiplies by 2 are :-");
+		mylist.stream().map(a -> a*2).forEach(System.out::println);
 		
 		
 		
